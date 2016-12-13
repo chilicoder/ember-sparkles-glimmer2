@@ -16,7 +16,12 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    resizeServiceDefaults: {
+      widthSensitive: true,
+      heightSensitive: true,
+      debounceTimeout: 200,
+      injectionFactories: ['view', 'component']
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

@@ -1,0 +1,23 @@
+<div class="col-sm-6">
+
+<div class="chart-container">
+    <h3>Chart</h3>
+    {{#ember-sparkles
+            data=simpleChartData
+            input-key='name'
+            output-key='value'
+
+            x-scale-type='band'
+            y-scale-type='linear'
+            x-domain=(map (r/get 'name') simpleChartData)
+            y-domain=(append 0 outputMax)
+
+    as |chart|}}
+
+        {{chart.bar-chart}}
+
+    {{/ember-sparkles}}
+</div>
+
+</div>
+{{outlet}}
